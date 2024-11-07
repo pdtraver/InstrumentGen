@@ -6,6 +6,6 @@ CLAP: https://github.com/LAION-AI/CLAP
 MusicGen: https://github.com/facebookresearch/audiocraft/tree/main
 
 Setting up environment from scratch:
-1. Install DAC
+1. Install DAC \n
    pip install git+https://github.com/descriptinc/descript-audio-codec
 2. 
