@@ -9,10 +9,10 @@ MusicGen: https://github.com/facebookresearch/audiocraft/tree/main
 
 Brandon was nice enough to compile a requirements.txt. To setup your environment from scratch do the following:
 ```
-   conda create -n instrument_gen python==3.9.0
-   conda activate instrument_gen
-   python --version
-   pip install -r requirements.txt
+conda create -n instrument_gen python==3.9.0
+conda activate instrument_gen
+python --version
+pip install -r requirements.txt
 ```
 If you still have issues after trying this, follow the steps below to install things manually.
 
