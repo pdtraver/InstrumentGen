@@ -11,7 +11,7 @@ model = dac.DAC.load(model_path)
 # model.to('cuda')
 
 # Load audio signal file
-signal = AudioSignal('/scratch/pdt9929/RVQ-Disentangle/Moroccan song (dElf).mp3')
+signal = AudioSignal('/Users/bcarone/PycharmProjects/InstrumentGen/Continue?.wav')
 
 signal = signal.resample(44100).to_mono().truncate_samples(44100)
 
