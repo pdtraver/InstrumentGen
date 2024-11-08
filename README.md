@@ -7,6 +7,15 @@ CLAP: https://github.com/LAION-AI/CLAP
 
 MusicGen: https://github.com/facebookresearch/audiocraft/tree/main
 
+Brandon was nice enough to compile a requirements.txt. To setup your environment from scratch do the following:
+```
+   conda create -n instrument_gen python==3.9.0
+   conda activate instrument_gen
+   python --version
+   pip install -r requirements.txt
+```
+If you still have issues after trying this, follow the steps below to install things manually.
+
 Setting up environment from scratch:
 1. Create virtual environment with Python 3.9.0 (prerequisite: install conda)
    ```
@@ -34,7 +43,7 @@ Setting up environment from scratch:
    python -m pip install -e .
    ```
    If you are not logged into git you may have to configure this before running the above.
-   If you run into errors based on dependencies after this, refer to the updated venv.txt in the repo & check what you are missing.
+   If you run into errors based on dependencies after this, refer to the updated peters_venv.txt or requirements.txt in the repo & check what you are missing.
    I had to install the following, for example:
    ```
    pip install spacy==3.7.5
