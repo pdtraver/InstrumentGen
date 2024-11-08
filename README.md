@@ -33,10 +33,15 @@ Setting up environment from scratch:
    pip install laion-clap
    pip install torchvision==0.16.0
    pip install torchaudio==2.1.0
+   ```
+   You'll also need to download the checkpoint used in the test script & change the location in the file to where it's stored on your machine.
+   You can download the 630k-best.pt file here: https://huggingface.co/lukewys/laion_clap/blob/main/630k-best.pt.
+   Now you should be able to run your test script:
+   ```
    python clap_test.py
    ```
 
-4. Clone Audiocraft & run musicgen test script
+5. Clone Audiocraft & run musicgen test script
    ```
    git clone https://github.com/facebookresearch/audiocraft.git
    pip install -r ./audiocraft/requirements.txt # this should fail
