@@ -1,5 +1,6 @@
 import dac
 from audiotools import AudioSignal
+import os
 
 #import d_models
 import torch
@@ -11,7 +12,9 @@ model = dac.DAC.load(model_path)
 # model.to('cuda')
 
 # Load audio signal file
-signal = AudioSignal('/Users/bcarone/PycharmProjects/InstrumentGen/Continue?.wav')
+audio_filename = 'Continue?.wav'
+audio_path = os.path.join(os.getcwd(), audio_filename)
+signal = AudioSignal(audio_path)
 
 signal = signal.resample(44100).to_mono().truncate_samples(44100)
 

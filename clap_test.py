@@ -2,6 +2,15 @@ import numpy as np
 import librosa
 import torch
 import laion_clap
+import os
+
+# Change your audio files & checkpoints here
+audio_filename = 'Continue?.wav'
+ckpt_filename = '630k-best.pt'
+
+# Get path locations of audio & ckpt files
+audio_loc = os.path.join(os.getcwd(), audio_filename)
+ckpt_loc = os.path.join(os.getcwd(), ckpt_filename)
 
 def int16_to_float32(x):
     return (x / 32767.0).astype(np.float32)
@@ -14,9 +23,9 @@ def float32_to_int16(x):
 # Was getting errors with fusion -- seemed to get Nones in mel spectrogram -- default to non-fusion now
 # Limitation of non-fusion is needing to use audio of the same length (and less than 10 seconds)
 model = laion_clap.CLAP_Module(enable_fusion=False)
-model.load_ckpt(ckpt = '/scratch/pdt9929/RVQ-Disentangle/instrument_gen/630k-best.pt')
+model.load_ckpt(ckpt = ckpt_loc)
 
-test_audio, _ = librosa.load('/scratch/pdt9929/RVQ-Disentangle/token_crepe/nsynth-audio-only/bass_electronic_018-022-025.wav')
+test_audio, _ = librosa.load(audio_loc)
 test_text = ['Sick dubstep bass sound']
 
 # Generate audio embeddings from audio data, returning tensor
