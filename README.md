@@ -212,3 +212,6 @@ Luckily DAC and CLAP are frozen modules in InstrumentGen, so we do not need to t
 5. Timbral Consistency Loss (Implementing TC measure)
 
 Each of these components will be important to matching the implementation provided in the paper. Some of the details (particularly regarding the text conditioning and TC measure) are a bit hazy as Native Instruments is a proprietary company, so we will likely have room for creativity and innovation on these fronts. Let's discuss at our meeting what people are most interested in and we can prepare for each subtask.
+
+#### Dataset (NSynth)
+https://magenta.tensorflow.org/datasets/nsynth
